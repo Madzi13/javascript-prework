@@ -1,16 +1,16 @@
-function playGame(playerMove) {
+{
+  function playGame(playerMove) {
   clearMessages();
-  function getMoveName(argMoveId) {
-    if (argMoveId == 1) {
+  const getMoveName = function(argMoveId) { 
+    if (argMoveId == 1) { 
       return 'kamień';
     } else if (argMoveId == 2) {
-      return 'papier';
+       return 'papier';
     } else if (argMoveId == 3) {
-      return 'nożyce';
-    } else {
-      printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-      return 'nieznany ruch';
-    }
+       return 'nożyce';
+    } else { 
+      printMessage('Nie znam ruchu o id ' + argMoveId + '.'); return 'nieznany ruch'; 
+    } 
   }
 
   let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -48,3 +48,4 @@ document.getElementById('btn2').addEventListener('click', function () {
 document.getElementById('btn3').addEventListener('click', function () {
   playGame(3);
 });
+}
