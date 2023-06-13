@@ -1,5 +1,5 @@
 {
-  function playGame(playerMove) {
+  const playGame = function (playerMove) {
   clearMessages();
   const getMoveName = function(argMoveId) { 
     if (argMoveId == 1) { 
@@ -36,16 +36,18 @@
 
   printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMoveName);
 }
-
-document.getElementById('btn1').addEventListener('click', function () {
+const handleClickBtn1 = function () {
   playGame(1);
-});
+};
+document.getElementById('btn1').addEventListener('click', handleClickBtn1);
 
-document.getElementById('btn2').addEventListener('click', function () {
+const handleClickBtn2 = function () {
   playGame(2);
-});
+};
+document.getElementById('btn2').addEventListener('click', handleClickBtn2);
 
-document.getElementById('btn3').addEventListener('click', function () {
+const handleClickBtn3 = function () {
   playGame(3);
-});
-}
+};
+document.getElementById('btn3').addEventListener('click', handleClickBtn3);
+};
